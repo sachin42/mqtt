@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQTT Web Client</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>MQTT Web Client</h1>
+
+    <div class="container">
+        <div class="panel received">
+            <h2>📥 Received Messages</h2>
+            <ul id="received-messages"></ul>
+        </div>
+
+        <div class="panel sent">
+            <h2>📤 Sent Messages</h2>
+            <ul id="sent-messages"></ul>
+        </div>
+
+        <div class="panel send">
+            <h2>➕ Publish Message</h2>
+            <input type="text" id="topic" placeholder="Enter topic">
+            <input type="text" id="message" placeholder="Enter message">
+            <button onclick="publishMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Include MQTT.js -->
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
